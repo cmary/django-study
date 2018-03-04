@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'courses',
     'xadmin',
     'crispy_forms',
+    'captcha',
+    'pure_pagination'
+    #'DjangoUeditor',
 
 ]
 AUTH_USER_MODEL = "users.UserProfile"
@@ -75,6 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.media',
             ],
         },
     },
@@ -138,3 +142,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+EMAIL_HOST = "pop.163.com"
+EMAIL_PORT = 25
+EMAIL_HOST_USER = "18577342986@163.com"
+EMAIL_HOST_PASSWORD = "18577342986"
+EMAIL_USE_TLS= False
+EMAIL_FROM = "18577342986@163.com"
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

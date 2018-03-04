@@ -22,10 +22,9 @@ class TeacherAdmin(object):
                     'image', 'add_time']
 
 class CityDictAadmin(object):
-
-    list_display = ['name', 'desc', 'work_years', 'add_time']
-    search_fields = ['name', 'desc', 'work_years', 'add_time']
-    list_filter = ['name', 'desc', 'work_years', 'add_time']
+    list_display = ['name', 'desc', 'add_time',]
+    search_fields = ['name', 'desc', 'add_time',]
+    list_filter = ['name', 'desc', 'add_time',]
 
 xadmin.site.register(CourseOrg,CourseOrgAdmin)
 xadmin.site.register(Teacher,TeacherAdmin)
